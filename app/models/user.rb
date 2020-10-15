@@ -32,7 +32,7 @@ class User < ApplicationRecord
   end
 
   def confirm_friend(user)
-    friendship = inverted_friendships.find_by (user_id: user.id)
+    friendship = inverted_friendships.find_by user_id: user.id
     friendship.confirmed = true
     friendship.save
   end
