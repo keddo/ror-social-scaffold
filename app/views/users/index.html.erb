@@ -10,6 +10,7 @@
     <tbody>
     <% @users.each do |user| %>
       <tr>
+       <% if current_user != user %>
         <td><%= user.name %> </td>
         <td>
         <div class="buttons">
@@ -21,11 +22,14 @@
         </td>
         <td>
         <div class="buttons">
-          <button class="button is-info is-light"> <i class="fas fa-user-plus mr-2"></i>
+          <button class="button is-info is-light"> 
+          <i class="fas fa-user-plus mr-2"></i>
           <span>Add Friend</span></button>
+          <span>Friend request sent</span></button>
         </div>
         </td>
       </tr>
+    <% end %>
     <% end %>
     </tbody>
     </table>
