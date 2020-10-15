@@ -1,5 +1,32 @@
 <section class="users-section">
-  <ul class="users-list">
-    <%= render @users %>
-  </ul>
+    <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>View</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %> </td>
+        <td>
+        <div class="buttons">
+          <button class="button is-primary is-light">
+          <i class="fas fa-eye mr-2"></i>
+           <span>View Profile</span>
+          </button>
+        </div>      
+        </td>
+        <td>
+        <div class="buttons">
+          <button class="button is-info is-light"> <i class="fas fa-user-plus mr-2"></i>
+          <span>Add Friend</span></button>
+        </div>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+    </table>
 </section>

@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>RorSocialScaffold</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -16,6 +17,12 @@
         </div>
         <div class="menu-item">
           <%= menu_link_to 'All users', users_path %>
+        </div>
+        <div class="menu-item">
+          <%= menu_link_to 'Pending Requests', users_path %>
+        </div>
+        <div class="menu-item">
+          <%= menu_link_to 'Friend Requests', users_path %>
         </div>
       </div>
       <% if current_user %>

@@ -28,7 +28,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 gem 'capybara'
 
-
+gem "bulma-rails", "~> 0.9.0"
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
