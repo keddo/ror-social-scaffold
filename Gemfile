@@ -27,6 +27,8 @@ gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 gem 'capybara'
+
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -37,6 +39,7 @@ gem 'capybara'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'devise'
+gem 'rails-controller-testing'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -48,6 +51,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 3.5'
   gem 'shoulda-matchers'
+  gem 'rails-controller-testing'
 end
 
 group :test do
@@ -56,6 +60,7 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'rails-controller-testing'
 end
 
 group :development do
