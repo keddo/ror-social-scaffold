@@ -1,8 +1,14 @@
 require 'rails_helper'
+require 'spec_helper'
 
 RSpec.describe User, type: :model do
 
-    user = User.create!(name: 'Test Name', email: 'test@email.com', gravatar_url: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?f=y')
+    user = User.create!(
+        name: 'Test Name',
+        email: 'test@email.com',
+        gravatar_url: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?f=y',
+        password: '123456'
+    )
 
     describe 'Validates' do
         it 'the presence of content' do
@@ -23,7 +29,7 @@ RSpec.describe User, type: :model do
         it { should have_many(:inverted_friendships) }
         it { should have_many(:friend_requests) }
         it { should have_many(:pending_friendships) }
-        it { should have_many(:pending_friends) }
+        it { should have_many(:pending_requests) }
     end
 
     describe 'friends' do

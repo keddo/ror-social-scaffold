@@ -13,7 +13,7 @@ class User < ApplicationRecord
   has_many :friendships
 
   has_many :pending_friendships, -> { where confirmed: nil }, class_name: 'Friendship', foreign_key: 'user_id'
-  has_many :pending_request, through: :pending_friendships, source: :friend
+  has_many :pending_requests, through: :pending_friendships, source: :friend
   has_many :inverted_friendships, -> { where confirmed: nil }, class_name: 'Friendship', foreign_key: 'friend_id'
   has_many :friend_requests, through: :inverted_friendships, source: :user
   has_many :inverted_friends, -> { where confirmed: true }, class_name: 'Friendship', foreign_key: 'friend_id'
