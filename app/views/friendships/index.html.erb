@@ -9,6 +9,7 @@
     </thead>
     <tbody>
     <% @friendship.each do |friendship| %>
+        <% if current_user != friendship.friend %>
         <tr>
             <td><%= friendship.friend.name %> </td>
             <td>
@@ -20,6 +21,7 @@
                 </div>
             </td>
         </tr>
+        <% end %>
       <% end %>
 </tbody>
 </table>
