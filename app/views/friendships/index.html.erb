@@ -1,0 +1,26 @@
+<h1>Pending Friend Request<h1>
+<section class="users-section">
+    <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @friendship.each do |friend| %>
+        <tr>
+            <td><%= friend.user.name %> </td>
+            <td>
+                <div class="buttons">
+                  <%= link_to friendships_path, class: "button is-warning is-light" do %> 
+                  <i class="fas fa-user mr-2"></i>
+                  <span> Request sent</span>
+                  <% end %>
+                </div>
+            </td>
+        </tr>
+      <% end %>
+</tbody>
+</table>
+</section>
