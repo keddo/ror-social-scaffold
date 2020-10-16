@@ -24,16 +24,16 @@
           <% if current_user.friend?(user) %>
               <td>
                 <div class="buttons">
-                  <link_to friendship_path(user), class: "button is-info is-light", method: :delete, data: {confirm: "Are you sure you want to Unfriend #{user.name}"} do %> 
+                  <%= link_to friendship_path(user), class: "button is-info is-light", method: :delete, data: {confirm: "Are you sure you want to Unfriend #{user.name}"} do %> 
                   <i class="fas fa-user-plus mr-2"></i>
                   <span>Unfriend</span>
                   <% end %>
                 </div>
               </td>
-          <% elsif current_user.pending_friends.include?(user) %>
+          <% elsif current_user.pending_requests.include?(user) %>
               <td>
                 <div class="buttons">
-                  <link_to friendship_path(user), class: "button is-info is-light" do %> 
+                  <%= link_to friendship_path(user), class: "button is-info is-light" do %> 
                   <i class="fas fa-user-plus mr-2"></i>
                   <span> Request sent</span>
                   <% end %>
@@ -42,7 +42,7 @@
           <% elsif current_user.friend_requests.include?(user) %>
               <td>
                 <div class="buttons">
-                  <link_to "#", class: "button is-sucess is-light" do %> 
+                  <%= link_to "#", class: "button is-sucess is-light" do %> 
                   <i class="fas fa-user-plus mr-2"></i>
                   <span> Accept </span>
                   <% end %>
@@ -50,7 +50,7 @@
               </td>
               <td>
                 <div class="buttons">
-                  <link_to "#", class: "button is-danger is-light" do %> 
+                  <%= link_to "#", class: "button is-danger is-light" do %> 
                   <i class="fas fa-user-plus mr-2"></i>
                   <span> Reject </span>
                   <% end %>
@@ -59,7 +59,7 @@
           <% else %>
             <td>
               <div class="buttons">
-                <link_to friendships_path(user_id: current_user.id, friend_id: user.id), class: "button is-info is-light", method: :post do %> 
+                <%= link_to friendships_path(user_id: current_user.id, friend_id: user.id), class: "button is-info is-light", method: :post do %> 
                 <i class="fas fa-user-plus mr-2"></i>
                 <span>Add Friend</span>
                 <% end %>
