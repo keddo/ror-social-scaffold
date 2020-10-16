@@ -8,9 +8,9 @@
       </tr>
     </thead>
     <tbody>
-    <% @friendship.each do |friend| %>
+    <% @friendship.each do |friendship| %>
         <tr>
-            <td><%= friend.user.name %> </td>
+            <td><%= friendship.friend.name %> </td>
             <td>
                 <div class="buttons">
                   <%= link_to friendships_path, class: "button is-warning is-light" do %> 
