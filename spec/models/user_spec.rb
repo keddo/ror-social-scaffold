@@ -32,7 +32,7 @@ RSpec.describe User, type: :model do
         it { should have_many(:pending_requests) }
     end
 
-    describe 'friends' do
+    describe '#friends' do
         it 'should return array of friends' do
             expect(user.friends).to be_an_instance_of(Array)
         end

@@ -22,15 +22,6 @@ class User < ApplicationRecord
     friendships.map{ |friendship| friendship.friend if friendship.confirmed }
   end
 
-  def pending_friends
-    pending_request.map { |friendship| friendship.friend unless friendship.confirmed }.compact
-  end
-
-  # Users who have requested to be friends
-  def friend_requests
-    friend_requests.map { |friendship| friendship.user unless friendship.confirmed }.compact
-  end
-
   def confirm_friend(user)
     friendship = inverted_friendships.find_by user_id: user.id
     friendship.confirmed = true
