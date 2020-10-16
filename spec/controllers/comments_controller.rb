@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe CommentsController, type: :controller do
   before(:each) do
     @user = User.create!(
-        name: 'Test Name',
-        email: 'test@email.com',
-        gravatar_url: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?f=y',
-        password: '123456'
+      name: 'Test Name',
+      email: 'test@email.com',
+      gravatar_url: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?f=y',
+      password: '123456'
     )
     sign_in @user
     @post = Post.create!(user_id: @user.id, content: 'this is a post! hi!')

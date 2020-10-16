@@ -7,7 +7,7 @@ RSpec.describe UsersController, type: :controller do
       email: 'test@email.com',
       gravatar_url: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?f=y',
       password: '123456'
-  )
+    )
     sign_in @user
   end
 
@@ -40,7 +40,7 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
-  #describe 'GET #pending_friends' do
+  # describe 'GET #pending_friends' do
   #  it 'gets all the users pending friends' do
   #    get(:pending_friends, params: { user_id: @user.id })
   #    expect(response).to be_successful
@@ -56,5 +56,5 @@ RSpec.describe UsersController, type: :controller do
   #    expect(response).to render_template(:friend_requests)
   #    expect(response).to have_http_status(200)
   #  end
-  #end
+  # end
 end

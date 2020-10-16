@@ -19,7 +19,7 @@ class User < ApplicationRecord
   has_many :inverted_friends, -> { where confirmed: true }, class_name: 'Friendship', foreign_key: 'friend_id'
 
   def friends
-    fa = friendships.map{ |friendship| friendship.friend if friendship.confirmed }
+    fa = friendships.map { |friendship| friendship.friend if friendship.confirmed }
     fa.compact
   end
 

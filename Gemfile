@@ -26,9 +26,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
-gem 'capybara'
 
-gem "bulma-rails", "~> 0.9.0"
+gem 'bulma-rails', '~> 0.9.0'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -36,41 +35,39 @@ gem "bulma-rails", "~> 0.9.0"
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
 
+gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
-gem 'rails-controller-testing'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'database_cleaner'
-  gem 'pry-rails'
   gem 'factory_bot_rails'
-  gem 'faker'
   gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'pry-rails'
   gem 'rspec-rails', '~> 3.5'
   gem 'shoulda-matchers'
-  gem 'rails-controller-testing'
 end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'capybara'
+  gem 'rails-controller-testing'
   gem 'selenium-webdriver'
   gem 'webdrivers'
-  gem 'rails-controller-testing'
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rubocop', '~>0.81.0'
-  gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring'
+  gem 'web-console', '>= 3.3.0'
 end
 
 # group :production do

@@ -29,7 +29,7 @@ class PostsController < ApplicationController
   end
 
   def fposts
-      friends = current_user.friends
-      Post.where(user_id: friends.each(&:id)).or(Post.where(user_id: current_user.id))
+    friends = current_user.friends
+    Post.where(user_id: friends.each(&:id)).or(Post.where(user_id: current_user.id))
   end
 end
