@@ -10,7 +10,7 @@ AllCops:
   DisplayCopNames: true
 
 Layout/LineLength:
-  Max: 120
+  Max: 140
 Metrics/MethodLength:
   Include:
     - "app/controllers/*"
@@ -34,6 +34,8 @@ Style/ClassAndModuleChildren:
 Style/EachForSimpleLoop:
   Enabled: false
 Style/AndOr:
+  Enabled: false
+Style/MixinUsage:
   Enabled: false
 Style/DefWithParentheses:
   Enabled: false
