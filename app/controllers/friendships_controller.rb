@@ -19,7 +19,7 @@ class FriendshipsController < ApplicationController
 
   def reject
     @friendship = Friendship.find_by(user_id: params[:friendship_id])
-    flash[:notice] = "You canceled #{@user.name} friend request!" if @friendship.destroy
+    flash[:notice] = "You canceled #{@friendship.user.name} friend request!" if @friendship.destroy
     redirect_to request.referrer
   end
 
