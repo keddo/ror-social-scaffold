@@ -1,0 +1,36 @@
+<h1>All you requested friends</h1>
+
+<section class="users-section">
+    <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Accept</th>
+        <th>Reject</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @users.each do |user| %>
+        <tr>
+            <td><%= user.name %> </td>
+            <td>
+                <div class="buttons">
+                  <%= link_to friendship_confirm_path(user), method: :post, class: "button is-success is-light" do %> 
+                  <i class="fas fa-user mr-2"></i>
+                  <span> Accept</span>
+                  <% end %>
+                </div>
+            </td>
+            <td>
+                <div class="buttons">
+                  <%= link_to friendship_reject_path(user), method: :delete, class: "button is-warning is-light" do %> 
+                  <i class="fas fa-user mr-2"></i>
+                  <span> Reject</span>
+                  <% end %>
+                </div>
+            </td>
+        </tr>
+      <% end %>
+ </tbody>
+</table>
+</section>

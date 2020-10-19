@@ -20,10 +20,10 @@
           <%= menu_link_to 'All users', users_path %>
         </div>
         <div class="menu-item">
-          <%= menu_link_to 'Pending Requests', friendships_path %>
+          <%= menu_link_to 'Pending Requests', user_pending_friends_path(current_user) %>
         </div>
         <div class="menu-item">
-          <%= menu_link_to 'Friend Requests', users_path %>
+          <%= menu_link_to 'Friend Requests', user_friend_requests_path(current_user) %>
         </div>
       </div>
     <% end %>
