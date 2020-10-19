@@ -18,7 +18,6 @@ class FriendshipsController < ApplicationController
   end
 
   def reject
-    debugger
     @friendship = Friendship.find_by(user_id: params[:friendship_id])
     flash[:notice] = "You canceled #{@user.name} friend request!" if @friendship.destroy
     redirect_to request.referrer
