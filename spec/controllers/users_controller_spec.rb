@@ -39,22 +39,4 @@ RSpec.describe UsersController, type: :controller do
       end
     end
   end
-
-  # describe 'GET #pending_friends' do
-  #  it 'gets all the users pending friends' do
-  #    get(:pending_friends, params: { user_id: @user.id })
-  #    expect(response).to be_successful
-  #    expect(response).to render_template(:pending_friends)
-  #    expect(response).to have_http_status(200)
-  #  end
-  # end
-
-  # describe 'GET #friend_requests' do
-  #  it 'gets all the users friend requests' do
-  #    get(:friend_requests, params: { user_id: @user.id })
-  #    expect(response).to be_successful
-  #    expect(response).to render_template(:friend_requests)
-  #    expect(response).to have_http_status(200)
-  #  end
-  # end
 end
