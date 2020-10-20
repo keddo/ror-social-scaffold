@@ -31,7 +31,7 @@ class FriendshipsController < ApplicationController
     flash[:alert] = "You have unfriended #{@user.name}" if @friendship1.destroy && @friendship2.destroy
     redirect_to request.referrer
   end
-  
+
   private
 
   def friend_params
