@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>RorSocialScaffold</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,6 +11,7 @@
   <body>
     <nav class="nav">
       <%= link_to 'Stay in touch', root_path %>
+    <% if user_signed_in? %>
       <div class="menu">
         <div class="menu-item">
           <%= menu_link_to 'Timeline', posts_path %>
@@ -17,7 +19,14 @@
         <div class="menu-item">
           <%= menu_link_to 'All users', users_path %>
         </div>
+        <div class="menu-item">
+          <%= menu_link_to 'Pending Requests', user_pending_friends_path(current_user) %>
+        </div>
+        <div class="menu-item">
+          <%= menu_link_to 'Friend Requests', user_friend_requests_path(current_user) %>
+        </div>
       </div>
+    <% end %>
       <% if current_user %>
         <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
       <% else %>
