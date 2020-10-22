@@ -29,21 +29,21 @@ To get this app ready to run, follow this steps:
 
 * clone this repo
 
-        pc:~$ git clone git@github.com:keddo/private-events.git
+        :~$ git clone git@github.com:keddo/private-events.git
 
 * install require gems
 
-        pc:~$ bundle install
+        :~$ bundle install
 * in case you need to run
 
-        pc:~$ yarn install --check-files
+        :~$ yarn install --check-files
 * Run database migration
 
-        pc:~$ rails db:migrate
+        :~$ rails db:migrate
 
 * Start the rails' server to test
 
-        pc:~$ rails server or rails s
+        :~$ rails server or rails s
 
 Setup database with:
 
