@@ -347,3 +347,16 @@ form {
     width: 50%;
   }
 }
+
+.d-flex {
+  display: flex;
+  align-items: center !important;
+}
+
+.buttons {
+  margin-right: 15px;
+}
+
+.buttons:not(:last-child) {
+  margin-bottom: 0 !important;
+}

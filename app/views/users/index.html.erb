@@ -20,16 +20,23 @@
               <% end %>
           </div>
         </td>
-        <td>
+        <td class="d-flex">
       <% if current_user.friend_requests.include?(user) %>
         <div class="buttons">
             <%= link_to friendship_confirm_path(user), method: :post, class: "button is-success is-light" do %> 
             <i class="fas fa-user mr-2"></i>
-            <span> Accept</span>
+            <span>Accept</span>
             <% end %>
         </div>
-        <% end %>
+          <div class="buttons">
+            <%= link_to friendship_reject_path(user), method: :delete, class: "button is-danger is-light" do %> 
+            <i class="fas fa-user mr-2"></i>
+            <span>Reject</span>
+            <% end %>
+        </div>
+        <% else %>
         <%= display_action_btns(user) %>
+        <% end %>
         </td>
         </tr>
       <% end %>
