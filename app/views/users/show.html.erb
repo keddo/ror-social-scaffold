@@ -1,37 +1,5 @@
 <section class="user-section">
-<table class="table">
-<thead>
-  <tr>
-    <th>Name</th>
-    <th>Action</th>
-  </tr>
-</thead>
-<tbody>
-    <tr>
-        <td>
-        <h2><%= "Name: #{@user.name}" %></h2>
-        </td>
-      <% if current_user.friend?(@user) %>
-          <td>
-            <div class="buttons">
-              <%= link_to friendship_path(user), class: "button is-info is-light", method: :delete, data: {confirm: "Are you sure you want to Unfriend #{user.name}"} do %>
-              <i class="fas fa-user-plus mr-2"></i>
-              <span>Unfriend</span>
-              <% end %>
-            </div>
-          </td>
-      <% else %>
-      <td>
-      <div class="buttons">
-        <%= link_to friendships_path(user_id: current_user.id, friend_id: @user.id), class: "button is-info is-light", method: :post do %>
-          <i class="fas fa-user-plus mr-2"></i>
-          <span>Add Friend</span>
-        <% end %>
-      </div>
-    </td>
-  <% end %>
-  </tr>
-  </table>
+<h2><%= "Name: #{@user.name}" %></h2>
   <article class="timeline">
     <h3>Recent posts:</h3>
     <ul class="posts">

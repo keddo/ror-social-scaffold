@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap");
 
-$primary-color-dark: #689f38;
-$primary-color: #8bc34a;
+$primary-color-dark: hsl(217, 71%, 53%);
+$primary-color: hsl(204, 86%, 53%);
 $primary-color-light: #dcedc8;
 $primary-color-text: #212121;
 $divider-color: #bdbdbd;
@@ -346,4 +346,17 @@ form {
   .user-section {
     width: 50%;
   }
+}
+
+.d-flex {
+  display: flex;
+  align-items: center !important;
+}
+
+.buttons {
+  margin-right: 15px;
+}
+
+.buttons:not(:last-child) {
+  margin-bottom: 0 !important;
 }
