@@ -70,25 +70,7 @@ Open `http://localhost:3000/` in your browser.
 ```
 
 ### Deployment
-* Login to heroku
 
-        :~$ heroku login
-* Create you app
-
-        pc:~$ heroku create
-* Verify remote was added to your project
-
-        :~$ git config --list --local | grep heroku
-
-* Deploy your code
-
-        :~$ git push heroku main
-* Migrate you database
-
-        :~$ heroku run rake db:migrate
-* Visit your application
-
-        :~$ heroku open
 
 
 ## Author
