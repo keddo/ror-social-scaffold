@@ -20,7 +20,17 @@
               <% end %>
           </div>
         </td>
+        <td>
+      <% if current_user.friend_requests.include?(user) %>
+        <div class="buttons">
+            <%= link_to friendship_confirm_path(user), method: :post, class: "button is-success is-light" do %> 
+            <i class="fas fa-user mr-2"></i>
+            <span> Accept</span>
+            <% end %>
+        </div>
+        <% end %>
         <%= display_action_btns(user) %>
+        </td>
         </tr>
       <% end %>
      <% end %>

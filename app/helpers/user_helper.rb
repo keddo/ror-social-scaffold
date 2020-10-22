@@ -24,20 +24,16 @@ module UserHelper
         end
       end
     elsif current_user.friend_requests.include?(user)
-      content_tag :td do
-        content_tag :div, class: 'buttons' do
-          link_to friendship_confirm_path(user), class: 'button is-success is-light', method: :post do
-            content_tag :i, class: 'fas fa-user-plus mr-2'
-            content_tag :span, 'Accept'
-          end
+      content_tag :div, class: 'buttons' do
+        link_to friendship_confirm_path(user), class: 'button is-success is-light', method: :post do
+          content_tag :i, class: 'fas fa-user-plus mr-2'
+          content_tag :span, 'Accept'
         end
       end
-      content_tag :td do
-        content_tag :div, class: 'buttons' do
-          link_to friendship_reject_path(user), class: 'button is-warning is-light', method: :delete do
-            content_tag :i, class: 'fas fa-user-plus mr-2'
-            content_tag :span, 'Reject'
-          end
+      content_tag :div, class: 'buttons' do
+        link_to friendship_reject_path(user), class: 'button is-danger is-light', method: :delete do
+          content_tag :i, class: 'fas fa-user-plus mr-2'
+          content_tag :span, 'Reject'
         end
       end
     else
