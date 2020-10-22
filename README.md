@@ -2,14 +2,16 @@
 
 > This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
+![screenshot](./app_screenshot.png)
+
 ## Built With
 
 - Ruby v2.7.0
 - Ruby on Rails v5.2.4
 
 ## Live Demo
+[Open Live Demo](https://instagram-react-app-67d58.web.app)
 
-TBA
 
 ## Getting Started
 
@@ -21,13 +23,27 @@ Ruby: 2.6.3
 Rails: 5.2.3
 Postgres: >=9.5
 
-### Setup
+## Setup configurations
 
-Instal gems with:
+To get this app ready to run, follow this steps:
 
-```
-bundle install
-```
+* clone this repo
+
+        pc:~$ git clone git@github.com:keddo/private-events.git
+
+* install require gems
+
+        pc:~$ bundle install
+* in case you need to run
+
+        pc:~$ yarn install --check-files
+* Run database migration
+
+        pc:~$ rails db:migrate
+
+* Start the rails' server to test
+
+        pc:~$ rails server or rails s
 
 Setup database with:
 
@@ -35,16 +51,6 @@ Setup database with:
    rails db:create
    rails db:migrate
 ```
-
-### Github Actions
-
-To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
-
-1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
-2. Create the `feature/branch` and push.
-3. Start working on your milestone as usual.
-4. Open a PR from the `feature/branch` when your work is done.
-
 
 ### Usage
 
@@ -62,21 +68,23 @@ Open `http://localhost:3000/` in your browser.
     rpsec --format documentation
 ```
 
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
-
 ### Deployment
 
 TBA
 
-## Authors
+## Author
 
-TBA
+👤 **Kedir Abdurahman**
+- Github: [@keddo](https://github.com/keddo)
+- Twitter: [@kedirman](https://twitter.com/kedirman)
+- Linkedin: [Kedir Abdurahman](https://linkedin.com/in/kedirabdurahman/) 
 
-## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+👤 **Felipe Dacal Fragoso**
 
-Feel free to check the [issues page](issues/).
+- Github: [@fdfragoso](https://github.com/fdfragoso)
+- Twitter: [@fdfragoso](https://twitter.com/fdfragoso)
+- Linkedin: [@fdfragoso](https://www.linkedin.com/in/fdfragoso/)
 
 ## Show your support
 
@@ -84,9 +92,5 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
-
-## 📝 License
-
-TBA
-
+- Project inspired by Microverse Program
+- Project originally taken from the odin project
