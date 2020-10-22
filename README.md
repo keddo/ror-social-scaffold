@@ -10,7 +10,7 @@
 - Ruby on Rails v5.2.4
 
 ## Live Demo
-[Open Live Demo](https://instagram-react-app-67d58.web.app)
+[Open Live Demo](https://safe-headland-61563.herokuapp.com/)
 
 
 ## Getting Started
@@ -29,21 +29,21 @@ To get this app ready to run, follow this steps:
 
 * clone this repo
 
-        :~$ git clone git@github.com:keddo/private-events.git
+        pc:~$ git clone git@github.com:keddo/private-events.git
 
 * install require gems
 
-        :~$ bundle install
+        pc:~$ bundle install
 * in case you need to run
 
-        :~$ yarn install --check-files
+        pc:~$ yarn install --check-files
 * Run database migration
 
-        :~$ rails db:migrate
+        pc:~$ rails db:migrate
 
 * Start the rails' server to test
 
-        :~$ rails server or rails s
+        pc:~$ rails server or rails s
 
 Setup database with:
 
@@ -65,12 +65,31 @@ Open `http://localhost:3000/` in your browser.
 ### Run tests
 
 ```
+    rpsec spec
     rpsec --format documentation
 ```
 
 ### Deployment
+* Login to heroku
 
-TBA
+        pc:~$ heroku login
+* Create you app
+
+        pc:~$ heroku create
+* Verify remote was added to your project
+
+        pc:~$ git config --list --local | grep heroku
+
+* Deploy your code
+
+        pc:~$ git push heroku main
+* Migrate you database
+
+        pc:~$ heroku run rake db:migrate
+* Visit your application
+
+        pc:~$ heroku open
+
 
 ## Author
 
